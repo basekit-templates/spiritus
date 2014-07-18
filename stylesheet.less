@@ -9,7 +9,23 @@
 // MAIN LAYOUT
 
 body {
-	background: @color-swatch1;
+	background-color: @color-swatch1;
+	@media @tablet {
+		position: relative;
+		left: 0;
+		-webkit-transition: left 0.25s ease-in-out;
+		-moz-transition: left 0.25s ease-in-out;
+		-o-transition: left 0.25s ease-in-out;
+		transition: left 0.25s ease-in-out;
+	}
+
+	&.navOpen {
+		@media @tablet {
+			background-color: mix(@color-swatch2, #fff, 6%);
+			left: -250px;
+		}
+	}
+	
 }
 // Max Content Width
 .content-wrap, .home-feature .spare.wrapper {
@@ -20,6 +36,8 @@ body {
 
 .zone-content {
 	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: @color-swatch1;
 	.widget {
 		max-width: 1232px;
 		margin-left: auto;
@@ -76,6 +94,7 @@ body {
 			-webkit-justify-content: space-between;
 		    -ms-flex-pack: justify;
 		    justify-content: space-between;
+		    padding: 6px 0;
 		}
 
 		@media @mobile {
@@ -139,7 +158,11 @@ body {
 
 	    @media @tablet {
 	    	display: block;
+	    	padding-top: 0;
+	    	padding-bottom: 10px;
 	    }
+
+	    
 	    
 
 
@@ -162,9 +185,9 @@ body {
 
 		    text-align: center;
 
-		    @media @tablet {
-		    	margin-right: 60px;
-		    }
+		   
+
+		   
 
 		    .widget.logo {
 		    	display: inline-block;
@@ -197,11 +220,35 @@ body {
 }
 
 
-// Extended Navigation
-@navItemSpace: 0.5em;
+// Widget: Extended Navigation
+// Reset aligning
+div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.align-right {
+	float: none;
+}
+
+
 .widget.extendednavigation {
 	position: relative;
-	right: -@navItemSpace;
+	right: -0.5em;
+
+	@media @tablet {
+		right: -16px;
+		margin-bottom: 12px;
+	}
+
+	ul {
+		@media @tablet {
+			padding-top: 0;
+
+		}
+		li {
+			@media @tablet {
+				border-bottom: none;
+			}
+		}
+	}
+
+
 	// Menu Item
 	ul li, ul li.folder {
 		margin: 0 1em;
@@ -210,12 +257,21 @@ body {
 
 		@media @tablet {
 			right: 0;
+			border-top: 1px solid fade(@color-swatch2, 20%);
+			&:last-of-type {
+				border-bottom: 1px solid fade(@color-swatch2, 20%);
+			}
 		}
 		
 		
 		& > .text, a .text {
 			
-			padding: 0 @navItemSpace;
+			padding: 0 0.5em;
+			@media @tablet {
+				color: @color-swatch3;
+				padding: 0 2em;
+
+			}
 			
 		}
 	}
@@ -225,6 +281,11 @@ body {
 		position: relative;
 		padding: 0;
 
+		@media @tablet {
+			color: @color-swatch3;
+		}
+
+		// underline
 		&:after {
 			content: "";
 			display: block;
@@ -238,6 +299,10 @@ body {
 			-moz-transition: all 0.25s ease-in-out;
 			-o-transition: all 0.25s ease-in-out;
 			transition: all 0.25s ease-in-out;
+
+			@media @tablet {
+				display: none;
+			}
 		}
 
 		&:hover {
@@ -256,8 +321,14 @@ body {
 		-moz-transition: background-color 0.25s ease-in-out;
 		-o-transition: background-color 0.25s ease-in-out;
 		transition: background-color 0.25s ease-in-out;
-
+		
 		border-radius: 5px 5px 0 0;
+
+		@media @tablet {
+			border-radius: 5px;
+		}
+
+		
 
 		// Icon
 		&:after {
@@ -274,11 +345,26 @@ body {
 			border-width: 11px 7.5px 0 7.5px;
 			border-color: rgba(255, 255, 255, 0.46) transparent transparent transparent;
 			margin-left: 0.5em;
+			@media @tablet {
+				border-color: @color-swatch3 transparent transparent transparent;
+
+			}
 		}
 
 		// hovered folder item
 		&:hover {
 			background-color:darken(@color-swatch2, 6%);
+			@media @tablet {
+				background-color: mix(@color-swatch2, #fff, 18%);
+				color: @color-swatch3;
+			}
+		}
+
+
+		.text:hover {
+			@media @tablet {
+				color: @color-swatch3;
+			}
 		}
 	}
 
@@ -289,31 +375,42 @@ body {
 		border-radius: 0 0 5px 5px;
 		max-width: 200px;
 		z-index: 2000;
+		margin: 0;
+
+		@media @tablet {
+			position: relative;
+			border-radius: 0;
+			background-color: mix(@color-swatch2, #fff, 12%);
+			
+		}
 
 		li {
 			margin-left: 0;
 			margin-right: 0;
 			right: 0;
+
 		}
 	}
 
 
 
 	// Hamburger
-	@pull-icon-size: 40px;
-	@pull-icon-hamburger-size: 30px;
+	
+
 
 
 	a.pull {
 	    display: none;
 	    @media @tablet {
 	        display: block;
-	        width: @pull-icon-size;
-	        height: @pull-icon-size;
-			background: @color-swatch3;
-			position: absolute;
+	        width: 60px;
+	        height: 60px;
+			background-color: mix(@color-swatch2, #fff, 6%);
+			position: relative;
 			right: 0;
-			top: 50%;
+			top: 0;
+			border-radius: 60px 0 0 60px;
+			margin: 0 0 0 auto;
 			
 
 	        &:hover {
@@ -323,13 +420,13 @@ body {
 	        &:after, &:before {
 	            content: '';
 	            position: absolute;
-	            width: @pull-icon-hamburger-size;
+	            width: 30px;
 	            height: 4px;
-	            background: @color-swatch1;
+	            background: @color-swatch3;
 	            top: 50%;
 	            left: 50%;
-	            margin: -(@pull-icon-hamburger-size / 3.5) 0 0 -(@pull-icon-hamburger-size / 2);
-	            box-shadow: 0 8px 0 @color-swatch1, 0 16px 0 @color-swatch1;
+	            margin: -10px 0 0 -10px;
+	            box-shadow: 0 8px 0 @color-swatch3, 0 16px 0 @color-swatch3;
 	        }
 	        &:before {
 	        	display: none;
@@ -339,17 +436,29 @@ body {
 
 	// Pull Menu Open
 	ul.open {
-		display: block;
+		@media @tablet {
+			display: block;
+			position: absolute;
+			background-color: mix(@color-swatch2, #fff, 6%);
+			right: -240px;
+			width: 230px;
+			li {
+				margin: 0;
+				padding: 0;
+				display: block;
+			}
+		}
+		
 	}
 	
 	// Hamburger to cross
     ul[style*="display: block"] + a.pull, ul.open + a.pull {
     	 @media @tablet {
-    	 	border-radius: 6px 0 0 0;
+    	 	
     	 	// Cross
     	 	&:after, &:before {
     	 		  box-shadow: none;
-    	 		  margin: -(@pull-icon-hamburger-size / 11) 0 0 -(@pull-icon-hamburger-size / 2);
+    	 		  margin: -3px 0 0 -10px;
     	 	}
     	 	// Cross Line 1
     	 	&:after {
@@ -413,21 +522,23 @@ body {
 
 .footer {
 	background-color: @color-swatch2;
-	margin-top: 30px;
+	
 	.content-wrap {
 		position: relative;
 		padding: 0 16px 30px;
 	}
 	.company {
+
 		.widget.companyname {
 			a {
 				display: inline-block;
 				background-color: mix(@color-swatch2, #fff, 6%);
-				padding: 0.5em 20px;
+				padding: 0.3em 25px;
 				position: relative;
 				position: relative;
 				top: -20px;
 				color: @color-swatch2;
+				font-size: @font-swatch4-font-size;
 
 				// Page corner effect
 				&:after {
@@ -473,24 +584,7 @@ body {
 	    -webkit-align-items: center;
 	    -ms-flex-align: center;
 	    align-items: center;
-    }
-
-.flex-item:nth-child(1) {
-    -webkit-box-ordinal-group: 1;
-    -moz-box-ordinal-group: 1;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-
-		.col1 {
+	    .col1 {
 			// Flex
 			-webkit-box-ordinal-group: 1;
 			-moz-box-ordinal-group: 1;
@@ -522,8 +616,9 @@ body {
 			-ms-flex-item-align: auto;
 			align-self: auto;
 		}
-	}
+    }
 }
+
 
 
 

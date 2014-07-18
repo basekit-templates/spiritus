@@ -347,8 +347,66 @@
 	}
 }
 
+// ======= Widget: Youtube 
+.widget.youtube {
+    .video-wrapper {
+        position: relative;
+    }
+}
 
 
+
+// ======= Widget: Twitter
+.widget.twitter {
+	.block-widget;
+	ul.twitter {
+		li {
+			// footer
+			a, time + span, time {
+				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				font-family: @font-swatch5-font-family;
+				line-height: 1;
+				font-weight: normal;
+				color: fade(@color-swatch5,50%);
+				text-decoration: none;
+			}
+			// profile pic
+			.twitter-profile-pic {
+				width: 62px;
+				height: auto;
+				display: block;
+				
+				
+				
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+					
+				}
+			}
+		}
+		p {
+			font-family: @font-swatch5-font-family;
+			a {
+				font-family: @font-swatch5-font-family;
+				font-size: @font-swatch5-font-size;
+				color: @color-swatch5;
+				line-height: @font-swatch5-line-height;
+			}
+		}
+
+
+	}
+	
+	.twitter-content {
+		line-height: 1.2em;
+		.bk-full-name {
+			color: @color-swatch3;
+			font-size: bkscale(@font-swatch5-font-size, 1);
+		}
+	}
+}
 
 
 
