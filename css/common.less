@@ -1,0 +1,254 @@
+// Retina images
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+
+
+// =============================================================================================
+// FORMS
+
+// Buttons
+.widget.feature .feature-bgimg .content button,
+.contactform button.btn,
+.widget.button button,
+.widget .btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button,
+.signupform fieldset button,
+.blog-search-submit-button,
+.widget.ecomproduct .ecom-product .btn,
+.widget.ecomcheckout .checkout-order-button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecomcategorieslist ul li a,
+.blog-post-more-link a,
+.blog-list-footer .paginate-older
+ {
+	border-radius: 50px;
+	height: @font-swatch7-line-height;
+	padding: 0 1.6em;
+	display: inline-block;
+	line-height: @font-swatch7-line-height;
+	cursor: pointer;
+	font-family: @font-swatch7-font-family;
+	font-weight: @font-swatch7-font-weight;
+	background-color: @color-swatch3;
+	color: @font-swatch7-color;
+	font-size: @font-swatch7-font-size;
+	border: none;
+
+	@media only screen and (max-width : 460px) {
+		padding: 0 1.2em;
+		line-height: bkscale(@font-swatch7-line-height, 0.7);
+		height: bkscale(@font-swatch7-line-height, 0.7);
+		font-size:bkscale(@font-swatch7-font-size, 0.75);
+	} 
+
+	&:hover {
+		background-color: darken(@color-swatch2, 10%);
+		text-decoration: none;
+	}
+}
+
+// Image buttons
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button {
+	padding-left: 50px;
+	background-position: 18px center;
+}
+
+
+// Text Inputs
+.contactform input, .contactform textarea,
+.widget.profile form fieldset input.email,
+.signupform fieldset input.email,
+.blogsearch input.blog-search-input,
+.widget input[type="text"],
+.widget input[type="email"],
+.productlist-filter .productlist-search input {
+	background: #F7F7F7;
+	border: 1px solid #D8D8D8;
+	border-radius: (@font-swatch7-line-height / 2);
+	padding: 0 1em;
+	margin-right: 0.6em;
+	min-height: (@font-swatch7-line-height - 2px);
+	line-height: (@font-swatch7-line-height - 2px);
+
+	@media only screen and (max-width : 460px) {
+		line-height: bkscale(@font-swatch7-line-height, 0.65);
+		min-height: bkscale(@font-swatch7-line-height, 0.65);
+	} 
+
+
+	&:hover {
+		border: 1px solid @color-swatch2;
+		
+	}
+
+	&:focus {
+		border: 1px solid @color-swatch2;
+		background-color: lighten(@color-swatch2, 60%);
+		color:  @color-swatch2;
+	}
+}
+
+.contactform textarea {
+	line-height: bkscale(@font-swatch7-line-height, 0.7);
+	min-height: 10em;
+}
+
+// Labels
+.contactform label,
+.signupform fieldset label,
+.blog-search-form label,
+.widget.ecomcheckout .delivery label,
+.ecom-product-vartitle {
+    font-family: @font-swatch4-font-family;
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+    line-height: @font-swatch4-line-height;
+    color: @font-swatch4-color;
+    letter-spacing: @font-swatch4-letter-spacing;
+}
+
+
+// Selects
+.widget.ecomproductslist .productlist-filter,
+.widget.ecomcheckout .delivery,
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation
+{
+	& select {
+		-moz-appearance: none;
+		text-indent: 0.01px;
+		-webkit-appearance: none;
+		text-overflow: '';
+		cursor: pointer;
+		position: relative;
+		background-image: image('/images/ui-select.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+		margin: 0;
+		padding: 0 64px 0 1em;
+		border: 2px solid @color-swatch3;
+		background-color: #F7F7F7;
+		color: @color-swatch5;
+		min-height: (@font-swatch7-line-height - 4px);
+		line-height: (@font-swatch7-line-height - 4px);
+		
+		border-radius: 30px;
+		position: relative;
+		display: inline-block;
+		font-family: @font-swatch7-font-family;
+		font-size: @font-swatch7-font-size;
+		font-weight: @font-swatch7-font-weight;
+
+		webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		@media only screen and (max-width : 460px) {
+			line-height: bkscale(@font-swatch7-line-height, 0.65);
+			min-height: bkscale(@font-swatch7-line-height, 0.65);
+			font-size:bkscale(@font-swatch7-font-size, 0.75);
+		} 
+
+		&:hover {
+			border-color: @color-swatch2;
+			
+		}
+
+		&:focus {
+			border-color: @color-swatch2;
+			background-color: lighten(@color-swatch2, 60%);
+			color:  @color-swatch2;
+		}
+	}
+}
+
+// Hides *custom* dropdown arrow in Firefox 30 and above
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {
+	.widget.ecomproductslist .productlist-filter,
+	.widget.ecomcheckout .delivery,
+	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation {
+		& select {
+			background-image: none;
+		}
+	}
+}
+
+
+// =============================================================================================
+// TYPOGRAPHY
+
+
+
+// Headings
+
+h1 {
+	border-bottom: 0.16em solid @color-swatch2;
+	margin-bottom: 0.4em;
+	@media @tablet {
+		font-size: bkscale(@font-swatch1-font-size, 0.9);
+		line-height: bkscale(@font-swatch1-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch1-font-size, 0.8);
+		line-height: bkscale(@font-swatch1-line-height, 0.8);
+	}
+}
+
+h2 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch2-font-size, 0.9);
+		line-height: bkscale(@font-swatch2-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch2-font-size, 0.8);
+		line-height: bkscale(@font-swatch2-line-height, 0.8);
+	}
+}
+
+h3 {
+	@media @tablet {
+		font-size: bkscale(@font-swatch3-font-size, 0.9);
+		line-height: bkscale(@font-swatch3-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch3-font-size, 0.8);
+		line-height: bkscale(@font-swatch3-line-height, 0.8);
+	}
+}
+
+h4 {
+	font-size: bkscale(@font-swatch4-font-size, 0.8);
+	line-height: bkscale(@font-swatch4-line-height, 0.8);
+}
+
+h5 {
+	font-size: bkscale(@font-swatch4-font-size, 0.8);
+	line-height: bkscale(@font-swatch4-line-height, 0.8);
+	color: fade(@color-swatch2, 80%);
+
+}
+
+h6 {
+	font-size: bkscale(@font-swatch4-font-size, 0.8);
+	line-height: bkscale(@font-swatch4-line-height, 0.8);
+	color: fade(@color-swatch2, 70%);
+	font-style: normal;
+	font-variant: normal;
+}
+
+// Normal text
+
+p, ul, ol, li, .p-font {
+	@media @tablet {
+		font-size: bkscale(@font-swatch5-font-size, 0.9);
+		line-height: bkscale(@font-swatch5-line-height, 0.9);
+	}
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+		line-height: bkscale(@font-swatch5-line-height, 0.8);
+	}
+}

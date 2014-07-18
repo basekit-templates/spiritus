@@ -1,0 +1,165 @@
+{
+	"name":"Spiritus",
+	"thumbnail":"screenshot.png",
+	"screenshot":"screenshot.png",
+	"templateType":"general",
+	"pageTypes": ["home"], 
+	"tags": {
+		"en": ["electronic", "electrical", "dark", "technical", "engineering", "contractor", "service", "inverted"]
+	},
+	"images":[
+        "images/feature-bg.jpg"
+    ],
+	"colorSwatches":
+	{
+        "Swatch 1": {
+            "color1":"#ffffff",
+            "color2":"#0FB1A5",
+            "color3":"#D40000",
+            "color4":"#ffffff",
+            "color5":"#264B48",
+            "color6":"#ffffff",
+            "color7":"#0FB1A5"
+        },
+        "Swatch 2": {
+           	"color1":"#3a6660",
+            "color2":"#ffffff",
+            "color3":"#ffbd23",
+            "color4":"#FEFF18",
+            "color5":"#ffffff",
+            "color6":"#ffbd23",
+            "color7":"#ffbd23"
+        },
+        "Swatch 3": {
+            "color1":"#3f3f3f",
+            "color2":"#ffffff",
+            "color3":"#FEFF18",
+            "color4":"#FEFF18",
+            "color5":"#ffffff",
+            "color6":"#FEFF18",
+            "color7":"#FEFF18"
+        },
+        "Swatch 4": {
+           	"color1":"#424c4f",
+            "color2":"#ffffff",
+            "color3":"#17d5ec",
+            "color4":"#FEFF18",
+            "color5":"#ffffff",
+            "color6":"#17d5ec",
+            "color7":"#17d5ec"
+        },
+        "Swatch 5": {
+           	"color1":"#1e4d7d",
+            "color2":"#ffffff",
+            "color3":"#ffffff",
+            "color4":"#ffffff",
+            "color5":"#ffffff",
+            "color6":"#ffffff",
+            "color7":"#ffffff"
+        }
+	},
+	"fontSwatch": {
+		"title": "Helvetica / Arial",
+		"font1": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "36px",
+			"font-weight": "700",
+			"line-height": "50px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch1",
+			"background-color-hover": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font2": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "24px",
+			"font-weight": "700",
+			"line-height": "36px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch2",
+			"background-color-hover": "@color-swatch2",
+			"letter-spacing": "inherit"
+		},
+		"font3": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "20px",
+			"font-weight": "700",
+			"line-height": "36px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3",
+			"letter-spacing": "inherit"
+		},
+		"font4": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "18px",
+			"font-weight": "700",
+			"line-height": "36px",
+			"color": "@color-swatch2",
+			"background-color": "@color-swatch4",
+			"background-color-hover": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font5": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "16px",
+			"font-weight": "400",
+			"line-height": "25px",
+			"color": "@color-swatch5",
+			"background-color": "@color-swatch5",
+			"background-color-hover": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "18px",
+			"font-weight": "700",
+			"line-height": "42px",
+			"color": "@color-swatch1",
+			"color-hover": "@color-swatch1",
+			"background-color": "@color-swatch6",
+			"background-color-hover": "@color-swatch2",
+			"letter-spacing": "inherit"
+		},
+		"font7": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "16px",
+			"font-weight": "700",
+			"line-height": "50px",
+			"color": "@color-swatch1",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3",
+			"letter-spacing": "inherit"
+		},
+		"font8": {
+			"font-family": "\"Sniglet\", Geneva, Gadget, sans-serif",
+			"font-size": "72px",
+			"font-weight": "400",
+			"line-height": "78px",
+			"color": "@color-swatch4",
+			"background-color": "@color-swatch1",
+			"background-color-hover": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font9": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "24px",
+			"font-weight": "700",
+			"line-height": "34px",
+			"color": "@color-swatch4",
+			"background-color": "@color-swatch4",
+			"background-color-hover": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font10": {
+			"font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+			"font-size": "24px",
+			"font-weight": "700",
+			"line-height": "44px",
+			"color": "@color-swatch4",
+			"background-color": "@color-swatch4",
+			"background-color-hover": "@color-swatch4",
+			"letter-spacing": "inherit"
+		}
+	}
+}

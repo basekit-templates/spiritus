@@ -1,0 +1,25 @@
+<div class="header">
+	<div class="content-wrap">
+
+		<div class="profile-bar">
+			<div class="p01">
+				{{widget('profile', 'w_profile02', { 'profileType':'email' })|raw}}
+			</div>
+			<div class="p02">
+				{{widget('profile', 'w_profile03', { 'profileType':'phone' })|raw}}
+			</div>
+		</div>
+
+		<div class="header-content">
+			<div class="nav">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</div>
+			<div class="company">
+				{{widget('logo', 'w_logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'w_companyname', {"business": "Spiritus"})|raw}}
+			</div>
+			
+		</div>
+
+	</div>
+</div>
