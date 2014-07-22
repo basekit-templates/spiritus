@@ -501,6 +501,10 @@
 			.ecom-product-add-to-cart-btn-wrapper {
 				margin: 0 0 1em 20px;
 				.ecom-product-add-to-cart-btn {
+					// added
+					&.added {
+						background-color: #B9C20A;
+					}
 					.text {
 						&:before {
 							background-image: image('/images/ui-cart.png');
@@ -716,6 +720,11 @@
 		@media @mobile {
 			border-bottom: 4px solid @color-swatch2;
 		}
+	}
+
+	// Empty basket
+	.checkout-empty {
+		margin: 2em 0;
 	}
 
 	// Checkout Items
@@ -1010,5 +1019,10 @@
 				float: none;
 			}
 		}
+	}
+
+	// Legal links
+	.checkout-legal-links {
+		margin-top: 2em;
 	}
 }
