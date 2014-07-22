@@ -5,7 +5,7 @@
 	"templateType":"general",
 	"pageTypes": ["home"], 
 	"tags": {
-		"en": ["electronic", "electrical", "dark", "technical", "engineering", "contractor", "service", "inverted"]
+		"en": ["clean","fancy","bold","positive","spirit","fit","healthy","flat"]
 	},
 	"images":[
         "images/feature-bg.jpg"
@@ -22,40 +22,40 @@
             "color7":"#0FB1A5"
         },
         "Swatch 2": {
-           	"color1":"#3a6660",
-            "color2":"#ffffff",
-            "color3":"#ffbd23",
-            "color4":"#FEFF18",
-            "color5":"#ffffff",
-            "color6":"#ffbd23",
-            "color7":"#ffbd23"
+           	"color1":"#ffffff",
+            "color2":"#92007B",
+            "color3":"#06A6B6",
+            "color4":"#ffffff",
+            "color5":"#000000",
+            "color6":"#ffffff",
+            "color7":"#92007B"
         },
         "Swatch 3": {
-            "color1":"#3f3f3f",
-            "color2":"#ffffff",
-            "color3":"#FEFF18",
-            "color4":"#FEFF18",
-            "color5":"#ffffff",
-            "color6":"#FEFF18",
-            "color7":"#FEFF18"
+            "color1":"#ffffff",
+            "color2":"#4E376E",
+            "color3":"#94B733",
+            "color4":"#ffffff",
+            "color5":"#444444",
+            "color6":"#ffffff",
+            "color7":"#4E376E"
         },
         "Swatch 4": {
-           	"color1":"#424c4f",
-            "color2":"#ffffff",
-            "color3":"#17d5ec",
-            "color4":"#FEFF18",
-            "color5":"#ffffff",
-            "color6":"#17d5ec",
-            "color7":"#17d5ec"
+           	"color1":"#ffffff",
+            "color2":"#057F9A",
+            "color3":"#A0BB02",
+            "color4":"#ffffff",
+            "color5":"#264B48",
+            "color6":"#ffffff",
+            "color7":"#4B4A42"
         },
         "Swatch 5": {
-           	"color1":"#1e4d7d",
-            "color2":"#ffffff",
-            "color3":"#ffffff",
+           "color1":"#ffffff",
+            "color2":"#88A803",
+            "color3":"#803F12",
             "color4":"#ffffff",
-            "color5":"#ffffff",
+            "color5":"#264B48",
             "color6":"#ffffff",
-            "color7":"#ffffff"
+            "color7":"#88A803"
         }
 	},
 	"fontSwatch": {
