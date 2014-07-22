@@ -1,0 +1,116 @@
+// =============================================================================================
+// Header and Footer profile widgets
+.header .profile-bar .widget.profile, .footer .footer-profile .widget.profile {
+	margin-bottom: 0;
+	@media @mobile {
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+	}
+	p, span {
+		padding-bottom: 0;
+		@media @mobile {
+			font-size: bkscale(@font-swatch5-font-size, 0.8);
+		}
+	}
+
+
+	// ProfileBar: Address
+	.bk-profile-address {
+		p {
+			display: inline-block;
+			&:after {
+				content: ",";
+				margin-left: -0.3em;
+				display: inline-block;
+			}
+			&:last-of-type:after {
+				display: none;
+			}
+		}
+	}
+	
+
+	// ProfileBar: Twitter
+	ul.twitter li{
+		padding-left: 40px;
+		min-height: 30px;
+		.twitter-profile-pic {
+			width: 30px;
+			height: 30px;
+			margin-top: -15px;	
+		}
+	}
+	// ProfileBar: Form
+	form {
+		margin: 0;
+		fieldset {
+			
+			input.email {
+				border: none;
+				min-height: 30px;
+				line-height: 30px;
+				background-color: fade(@color-swatch1, 50%);
+				min-width: 180px;
+				&:focus {
+					background-color: @color-swatch1;
+					border-color: @color-swatch1;
+				}
+				@media @mobile {
+					min-height: 26px;
+					line-height: 26px;
+					height: 26px;
+				}
+			}
+			button.btn {
+				background-color:  fade(@color-swatch1, 50%);
+				color: darken(@color-swatch2, 10%);
+				height: 43px;
+				line-height: 43px;
+				&:hover {
+					 background-color: @color-swatch1;
+				}
+				@media @mobile {
+					height: 28px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+	// ProfileBar: Social icons
+	.bk-profile-socialicons {
+		margin: 6px 0 0 0;
+		a, a:hover {
+			border: none;
+		}
+		a {
+			width: 36px;
+			height: 36px;
+			opacity: 0.6;
+			&:hover {
+				opacity: 1;
+			}
+			@media @tablet {
+				width: 30px;
+				height: 30px;
+
+			}
+			@media @mobile {
+				width: 26px;
+				height: 26px;
+			}
+		}
+	}
+	// ProfileBar: Number
+	.bk-profile-phone {
+		white-space: nowrap;
+	}
+
+}
+
+
+
+
+
+
+
+
+	
