@@ -1,0 +1,290 @@
+// Widget: Extended Navigation
+
+@tabletNavWidth: 400px;
+@mobileNavWidth: 250px;
+
+// Reset aligning
+div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.align-right {
+	float: none;
+}
+
+// Slide out navigation BODY shift
+body {
+	@media @tablet {
+		position: relative;
+		left: 0;
+		-webkit-transition: left 0.25s ease-in-out;
+		-moz-transition: left 0.25s ease-in-out;
+		-o-transition: left 0.25s ease-in-out;
+		transition: left 0.25s ease-in-out;
+	}
+	
+	// Shift content to the left when nav is open
+	&.navOpen {
+		@media @tablet {
+			background-color: mix(@color-swatch2, @color-swatch1, 6%);
+			left: -@tabletNavWidth;
+		}
+		@media @mobile {
+			left: -@mobileNavWidth;
+		}
+		.header {
+			box-shadow: -20px 0px 30px 0px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+
+// Nav
+.widget.extendednavigation {
+	position: relative;
+	right: -0.5em;
+
+	@media @tablet {
+		right: -16px;
+		margin-bottom: 12px;
+	}
+
+	ul {
+		@media @tablet {
+			// BS reset
+			padding-top: 0;
+		}
+	}
+
+
+	// ---- Menu Item
+	ul li, ul li.folder {
+		margin: 0 1em;
+		position: relative;
+		right: -1em;
+
+		@media @tablet {
+			right: 0;
+			border-top: 1px solid fade(@color-swatch2, 20%);
+			border-bottom: none;
+			text-align: left;
+			&:last-of-type {
+				border-bottom: 1px solid fade(@color-swatch2, 20%);
+			}
+		}
+		
+		// Item Text
+		& > .text, a .text {
+			padding: 0 0.5em;
+			@media @tablet {
+				color: @color-swatch3;
+				padding: 0 1em;
+
+			}
+		}
+
+		// Link
+		a {
+			position: relative;
+			padding: 0;
+
+			@media @tablet {
+				color: @color-swatch3;
+			}
+
+			// underline
+			&:after {
+				content: "";
+				display: block;
+				height: 3px;
+				background-color: rgba(255, 255, 255, 0.46);
+				width: 0;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				-webkit-transition: all 0.25s ease-in-out;
+				-moz-transition: all 0.25s ease-in-out;
+				-o-transition: all 0.25s ease-in-out;
+				transition: all 0.25s ease-in-out;
+
+				@media @tablet {
+					display: none;
+				}
+			}
+
+			&:hover {
+				&:after {
+					width: 100%;
+					position: absolute;
+					left: 0;
+				}
+			}
+		}
+	}
+
+
+
+
+	// ---- Folder item
+	ul li.folder {
+		-webkit-transition: background-color 0.25s ease-in-out;
+		-moz-transition: background-color 0.25s ease-in-out;
+		-o-transition: background-color 0.25s ease-in-out;
+		transition: background-color 0.25s ease-in-out;
+		text-align: left;
+		border-radius: 5px 5px 0 0;
+
+		@media @tablet {
+			border-radius: 0px;
+		}
+
+		// Arrow Icon
+		&:after {
+			// Hiding BS icon
+			display: none;
+		}
+		// Custom Drop Down icon
+		& > .text:after {
+			display: inline-block;
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 11px 7.5px 0 7.5px;
+			border-color: rgba(255, 255, 255, 0.46) transparent transparent transparent;
+			margin-left: 0.5em;
+			@media @tablet {
+				border-color: @color-swatch3 transparent transparent transparent;
+			}
+		}
+
+		// hovered folder item
+		&:hover {
+			background-color:darken(@color-swatch2, 6%);
+			@media @tablet {
+				background-color: mix(@color-swatch2, #fff, 18%);
+				color: @color-swatch3;
+			}
+		}
+
+		.text:hover {
+			@media @tablet {
+				color: @color-swatch3;
+			}
+		}
+	}
+
+	// ---- Open folder
+	ul li:hover ul {
+		background-color:darken(@color-swatch2, 3%);
+		min-width: 100%;
+		border-radius: 0 0 5px 5px;
+		max-width: 200px;
+		z-index: 2000;
+		margin: 0;
+
+		@media @tablet {
+			position: relative;
+			border-radius: 0;
+			background-color: mix(@color-swatch2, #fff, 12%);
+			max-width: 100%;
+		}
+
+		li {
+			margin-left: 0;
+			margin-right: 0;
+			right: 0;
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+
+
+	// ---- Collapsible nav
+	
+	// Trigger Icon: Hamburger
+	a.pull {
+		// Dessktop
+	    display: none;
+	    @media @tablet {
+	        display: block;
+	        width: 60px;
+	        height: 60px;
+			background-color: mix(@color-swatch2, #fff, 6%);
+			position: relative;
+			right: 0;
+			top: 0;
+			border-radius: 60px 0 0 60px;
+			margin: 0 0 0 auto;
+			
+	        &:hover {
+	           cursor: pointer;
+	        }
+	        // Hamburger Bun and Meat
+	        &:after, &:before {
+	            content: '';
+	            position: absolute;
+	            width: 30px;
+	            height: 4px;
+	            background: @color-swatch3;
+	            top: 50%;
+	            left: 50%;
+	            margin: -10px 0 0 -10px;
+	            box-shadow: 0 8px 0 @color-swatch3, 0 16px 0 @color-swatch3;
+	        }
+	        &:before {
+	        	display: none;
+	        }
+        }
+        @media @mobile {
+        	width: 50px;
+        	height: 50px;
+        }
+    }
+
+   	// Trigger Icon: Cross
+    ul[style*="display: block"] + a.pull, ul.open + a.pull {
+    	 @media @tablet {
+    	 	// Cross lines
+    	 	&:after, &:before {
+    	 		  box-shadow: none;
+    	 		  margin: -3px 0 0 -10px;
+    	 	}
+    	 	// Cross Line 1
+    	 	&:after {
+	            -webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+    	 	}
+    	 	// Cross Line 2
+    	 	&:before {
+    	 		display: block;
+	            -webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+    	 	}
+    	}
+    }
+
+
+	// ---- Pull Menu Open
+	ul.open {
+		@media @tablet {
+			display: block;
+			position: absolute;
+			background-color: mix(@color-swatch2, #fff, 6%);
+			right: (-@tabletNavWidth + 10);
+			width: (@tabletNavWidth - 20);
+			li {
+				margin: 0;
+				padding: 0;
+				display: block;
+			}
+		}
+		@media @mobile {
+			right: (-@mobileNavWidth + 10);
+			width: (@mobileNavWidth - 20);
+		}	
+	}	
+}
