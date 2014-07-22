@@ -15,26 +15,50 @@
 	{% include "includes/head.twig" %}
 	{% include basekit.headScript %}
 </head>
-<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+<body id="templateBody" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+	<div id="wrap">
+		{% include "includes/header.twig" %}
 
-	{% include "includes/header.twig" %}
+		{% block content %}
+		{% endblock %}
 
-	{% block content %}
-	{% endblock %}
-
-	{% include "includes/footer.twig" %}
+		{% include "includes/footer.twig" %}
 
 
-	{% include basekit.bodyScript %}
+		{% include basekit.bodyScript %}
 
-	<script type="text/javascript">
-		! function () {
-		    function supportsSVG() {
-		        return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
-		    }
-		    if (supportsSVG()) document.documentElement.className += ' svg'
-		}()
-	</script>
-	
+		<script>
+			(function() {
+
+
+
+
+				var $body = document.getElementById("templateBody");
+				$menu_trigger = document.getElementsByClassName('pull')[0];
+				if ( typeof $menu_trigger !== 'undefined' ) {
+					$menu_trigger.addEventListener('click', function() {
+						$body.className = ( $body.className == 'navOpen' )? '' : 'navOpen';
+						$(this).addClass('navOpen').removeClass('navOpen');
+					});
+				}
+			}).call(this);
+
+
+		
+
+			
+
+
+		</script>
+
+		<script type="text/javascript">
+			! function () {
+			    function supportsSVG() {
+			        return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+			    }
+			    if (supportsSVG()) document.documentElement.className += ' svg'
+			}()
+		</script>
+	</div>
 </body>
 </html>
