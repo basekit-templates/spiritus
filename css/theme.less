@@ -107,10 +107,15 @@ body {
 
 		@media @mobile {
 			margin-right: 0;
+			max-width: 100%;
 		}
 	}
+	
 	.p02 {
 		max-width: 50%;
+		@media @mobile {
+			max-width: 100%;
+		}
 	}
 
 	.header-content {
@@ -396,6 +401,9 @@ body {
 			align-self: auto;
 
 			max-width: 50%;
+			@media @tablet {
+				max-width: 100%;
+			}
 		}
 		.col2 {
 			// Flex
@@ -418,6 +426,7 @@ body {
 
 			@media @tablet {
 				text-align: left;
+				max-width: 100%;
 			}
 		}
 
