@@ -55,7 +55,11 @@
 		    -ms-flex-item-align: auto;
 		    align-self: auto;
 		    // Appearance
-		    margin-right: 1em;	   
+		    margin-right: 1em;
+		    @media @mobile {
+		    	width: 100%;
+		    	display: block;
+		    }	   
         }
         input {  
         	// Flex
@@ -109,78 +113,14 @@
 				margin-bottom: 20px;
 			}
 
-			&.has-image {
-				min-height: 400px;
-				@media @bp-blog-compact {
-					min-height: 310px;
-				}
-				@media @mobile {
-					min-height: 1px;
-				}
-			}
 
 			.blog-post-feature-image-wrap {
-				width: 370px;
-				height: 370px;
+				padding-bottom: 30%;
 				background-size: cover;
 				background-position: center;
 				z-index: 1000;
 
-				position: absolute;
-				left: 20px;
-				top: 20px;
-
-				@media @bp-blog-compact {
-					width: 200px;
-					height: 200px;
-				}
-
-				@media @bp-blog-small {
-					width: 100px;
-					height: 100px;
-				}
-				@media @mobile {
-					position: relative;
-				}
-				
-				img {
-					display: none;
-				}
-			}
-
-			.blog-post-title {
-				background-color: @color-swatch2;
-				padding: 1.2em 20px 1em 440px;
-				position: relative;
-				font-family: @font-swatch1-font-family;
-			    font-weight: @font-swatch1-font-weight;
-			    line-height: @font-swatch1-line-height;
-			    letter-spacing: @font-swatch1-letter-spacing;
-			    font-size: @font-swatch1-font-size;
-
-			    @media @bp-blog-compact {
-					padding-left: 250px;
-				}
-
-				@media @tablet {
-				    font-size: bkscale(@font-swatch1-font-size, 0.7);
-				    line-height: bkscale(@font-swatch1-line-height, 0.7);
-				    padding-top: 1.5em;
-				}
-
-				@media @bp-blog-small {
-					min-height: 140px;
-					padding-left: 140px;
-				}
-				@media @mobile {
-					padding-left: 20px;
-				    font-size: bkscale(@font-swatch1-font-size, 0.4);
-				    line-height: bkscale(@font-swatch1-line-height, 0.4);
-				    min-height: 1px;
-				    padding-top: 2em;
-				}
-
-				// Page corner effect
+				// Page flip corner
 				&:after {
 					content: "";
 					position: absolute;
@@ -188,10 +128,34 @@
 					right: 0;
 					border-width: 0 30px 30px 0;
 					border-style: solid;
-					border-color: lighten(@color-swatch2, 6%) @color-swatch1;
-					@media @mobile {
-						border-width: 0 16px 16px 0;
-					}
+					border-color: fade(@color-swatch1, 50%) @color-swatch1;
+				}
+
+				img {
+					display: none;
+				}
+			}
+
+			.blog-post-title {
+				background-color: @color-swatch2;
+				padding: 1.2em 20px 1em;
+				position: relative;
+				font-family: @font-swatch1-font-family;
+			    font-weight: @font-swatch1-font-weight;
+			    line-height: @font-swatch1-line-height;
+			    letter-spacing: @font-swatch1-letter-spacing;
+			    font-size: @font-swatch1-font-size;
+			 
+
+				@media @tablet {
+				    font-size: bkscale(@font-swatch1-font-size, 0.7);
+				    line-height: bkscale(@font-swatch1-line-height, 0.7);
+				}
+			
+				@media @mobile {
+				    font-size: bkscale(@font-swatch1-font-size, 0.4);
+				    line-height: bkscale(@font-swatch1-line-height, 0.4);
+				  
 				}
 
 				a {
@@ -200,14 +164,9 @@
 			}
 
 			.blog-post-summary, .blog-post-body {
-				margin: 2.5em 0;
-				margin-left: 440px;
-				@media @bp-blog-compact {
-					margin-left: 250px;
-				}
-				@media @bp-blog-small {
-					margin-left: 140px;
-				}
+				margin: 2.5em 0 1em;
+				
+			
 				@media @mobile {
 					margin: 1.5em 0;
 					margin-left: 0;
@@ -216,41 +175,14 @@
 			}
 
 			.blog-post-more-link {
-				margin-left: 440px;
-				@media @bp-blog-compact {
-					margin-left: 250px;
-				}
-				@media @bp-blog-small {
-					margin-left: 140px;
-				}
-				@media @mobile {
-					margin-left: 0;
-				}
+				float: left;
 				a {
-										
 				}
 			}
 			.blog-post-date {
-				margin-left: 440px;
-				position: absolute;
-				top: 20px;
+				color: fade(@color-swatch5, 50%);
 				line-height: 1;
-				left: 0px;
-				color: @color-swatch1;
-				@media @bp-blog-compact {
-					margin-left: 250px;
-				}
-				@media @bp-blog-small {
-					margin-left: 140px;
-				}
-				@media @mobile {
-					margin-left: 0px;
-					position: absolute;
-					color: fade(@color-swatch5, 50%);
-					left: auto;
-					right: 16px;
-					top: 56px;
-				}
+				float: right;
 			}
 		}
 	}
