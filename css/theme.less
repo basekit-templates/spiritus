@@ -191,14 +191,19 @@ body {
 		    .widget.logo {
 		    	display: inline-block;
 		    	padding-bottom: 10px;
-		    	@media @mobile {
-		    		.logo {
-		    			img {
-		    				width: 80%;
+		    	.logo {
+		    		img {
+		    			@media @tablet {
 		    				height: auto;
+		    				max-width: 432px;
+		    			}
+		    			@media @mobile {
+		    				width: 80%;
+		    				max-width: 432px;
 		    			}
 		    		}
 		    	}
+		    	
 		    	a {
 		    		position: relative;
 		    		top: 0;
