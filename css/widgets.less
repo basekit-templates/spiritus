@@ -39,28 +39,6 @@
 @socialicons-ico-size: 48px;
 
 .widget.socialicons .icons, .widget.profile .bk-profile-socialicons {
-	span {
-		a {
-			border-radius: (@socialicons-ico-size / 2);
-			width: @socialicons-ico-size;
-			height: @socialicons-ico-size;
-			background-size: 120%;
-			background-color: transparent;
-			border: 2px solid @color-swatch3;
-			text-indent: 1000px;
-			overflow: hidden;
-			
-			&:hover {
-				border-color: darken(@color-swatch2, 10%);
-				text-decoration: none;
-			}
-			@media only screen and (max-width : 460px) {
-				width: (@socialicons-ico-size * 0.8);
-				height: (@socialicons-ico-size * 0.8);
-				background-color: red;
-			} 
-		}
-	}
 
 	.bk-socialicons-linkedin a {
 		background-image: image('/images/ico_s_linkedin.png');
@@ -87,6 +65,33 @@
 	}
 
 }
+
+
+.widget.socialicons .icons {
+	span {
+		a {
+			border-radius: (@socialicons-ico-size / 2);
+			width: @socialicons-ico-size;
+			height: @socialicons-ico-size;
+			background-size: 120%;
+			background-color: transparent;
+			border: 2px solid @color-swatch3;
+			text-indent: 1000px;
+			overflow: hidden;
+			
+			&:hover {
+				border-color: darken(@color-swatch2, 10%);
+				text-decoration: none;
+			}
+			@media only screen and (max-width : 460px) {
+				width: (@socialicons-ico-size * 0.8);
+				height: (@socialicons-ico-size * 0.8);
+				background-color: red;
+			} 
+		}
+	}
+}
+
 
 
 // Skewed price tag

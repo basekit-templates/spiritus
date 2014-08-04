@@ -140,11 +140,11 @@
 
 			
 			input.email {
-				border: none;
-				min-height: 30px;
-				line-height: 30px;
 				background-color: fade(@color-swatch1, 50%);
 				min-width: 180px;
+				height: (@font-swatch7-font-size * 2);
+				line-height: (@font-swatch7-font-size * 2);
+				border-color: transparent;
 
 				// Flex child
 				-webkit-box-ordinal-group: 1;
@@ -160,10 +160,15 @@
 				-webkit-align-self: auto;
 				-ms-flex-item-align: auto;
 				align-self: auto;
+				&:hover {
+					border-color: transparent;
+					background-color: fade(@color-swatch1, 90%);
+				}
 				&:focus {
 					background-color: @color-swatch1;
 					border-color: @color-swatch1;
 				}
+
 				@media @mobile {
 					min-height: 26px;
 					line-height: 26px;
@@ -173,8 +178,8 @@
 			button.btn {
 				background-color:  fade(@color-swatch1, 50%);
 				color: darken(@color-swatch2, 10%);
-				height: 32px;
-				line-height: 32px;
+				height: (@font-swatch7-font-size * 2);
+				line-height: (@font-swatch7-font-size * 2);
 
 				// Flex child
 				-webkit-box-ordinal-group: 1;
@@ -203,34 +208,37 @@
 	}
 	// ProfileBar: Social icons
 	.bk-profile-socialicons {
-		margin: 6px 0 0 0;
-		a, a:hover {
-			border: none;
-		}
-		a {
-			width: 36px;
-			height: 36px;
-			
-			&:hover {
-			}
-			@media @tablet {
-				width: 30px;
-				height: 30px;
+		margin: 0;
+		span {
+			a {
+				border-radius: (@socialicons-ico-size / 2);
+				width: @socialicons-ico-size;
+				height: @socialicons-ico-size;
+				background-size: 100%;
+				background-color: transparent;
+				text-indent: 1000px;
+				overflow: hidden;
+				width: 34px;
+				height: 34px;
+				margin: 0;
+				
+				&:hover {
+					text-decoration: none;
+					background-color: transparent;
 
-			}
-			@media @mobile {
-				width: 26px;
-				height: 26px;
+				}
 			}
 		}
 	}
+
+
+
 	// ProfileBar: Number
 	.bk-profile-phone {
 		white-space: nowrap;
 	}
 
 }
-
 
 
 
