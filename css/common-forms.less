@@ -21,10 +21,8 @@
 .widget.clicktocall a
  {
 	border-radius: 50px;
-	height: @font-swatch7-line-height;
 	padding: 0 1.6em;
 	display: inline-block;
-	line-height: @font-swatch7-line-height;
 	cursor: pointer;
 	font-family: @font-swatch7-font-family;
 	font-weight: @font-swatch7-font-weight;
@@ -37,11 +35,14 @@
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
 
+	height: (@font-swatch7-font-size * 2.5);
+	line-height: (@font-swatch7-font-size * 2.5);
+
 	@media only screen and (max-width : 460px) {
 		padding: 0 1.2em;
-		line-height: bkscale(@font-swatch7-line-height, 0.7);
-		height: bkscale(@font-swatch7-line-height, 0.7);
-		font-size:bkscale(@font-swatch7-font-size, 0.75);
+		font-size: bkscale(@font-swatch7-font-size, 0.75);
+		height: (@font-swatch7-font-size * 2);
+		line-height: (@font-swatch7-font-size * 2);
 	} 
 
 	&:hover {
@@ -64,6 +65,8 @@
 }
 
 
+
+
 // Text Inputs
 .contactform input, .contactform textarea,
 .widget.profile form fieldset input.email,
@@ -78,14 +81,15 @@
 	border-radius: (@font-swatch7-line-height / 2);
 	padding: 0 1em;
 	margin-right: 0.6em;
-	min-height: (@font-swatch7-line-height - 2px);
-	line-height: (@font-swatch7-line-height - 2px);
-	height: auto;
 	text-indent: 0;
 
+	height: (@font-swatch7-font-size * 2.5 );
+	line-height: (@font-swatch7-font-size * 2.5 );
+
 	@media only screen and (max-width : 460px) {
-		line-height: bkscale(@font-swatch7-line-height, 0.65);
-		min-height: bkscale(@font-swatch7-line-height, 0.65);
+		font-size: bkscale(@font-swatch7-font-size, 0.75);
+		height: (@font-swatch7-font-size * 2);
+		line-height: (@font-swatch7-font-size * 2);
 	} 
 
 
@@ -151,8 +155,7 @@
 		border: 2px solid @color-swatch3;
 		background-color: #F7F7F7;
 		color: @color-swatch5;
-		min-height: (@font-swatch7-line-height - 4px);
-		line-height: (@font-swatch7-line-height - 4px);
+		
 		
 		border-radius: 30px;
 		position: relative;
@@ -161,14 +164,16 @@
 		font-size: @font-swatch7-font-size;
 		font-weight: @font-swatch7-font-weight;
 
+		height: (@font-swatch7-font-size * 2.5 );
+		line-height: 1;
+
 		webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 
 		@media only screen and (max-width : 460px) {
-			line-height: bkscale(@font-swatch7-line-height, 0.65);
-			min-height: bkscale(@font-swatch7-line-height, 0.65);
-			font-size:bkscale(@font-swatch7-font-size, 0.75);
+			font-size: bkscale(@font-swatch7-font-size, 0.75);
+			height: (@font-swatch7-font-size * 2);
 		} 
 
 		&:hover {
