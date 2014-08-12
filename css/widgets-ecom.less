@@ -5,6 +5,11 @@
 // ======= Widget: e-com Basket
 .widget.ecombasket {
 	.block-widget;
+
+	p {
+		padding: 0;
+	}
+
 	.ecombasket-pull {
 		border-radius: 60px;
 		padding: 0 0.5em 0 1.2em;
@@ -131,12 +136,13 @@
 					}
 					.ecombasket-remove-button {
 						background-color: @color-swatch3;
-						color: @color-swatch1;
+						color: @font-swatch7-color;
 						display: inline-block;
 						font-size: bkscale(@font-swatch5-font-size, 0.8);
 						text-decoration: none;
 						padding: 0 0.6em;
 						border-radius: 60px;
+						border: none;
 						line-height: 1.4;
 						&:hover {
 							background-color: darken(@color-swatch2, 10%);
@@ -162,7 +168,7 @@
 				}
 			}
 		}
-		.ecombasket-checkout-wrap {
+		.ecombasket-summary-wrap {
 			float: right;
 			margin: 0;
 			@media only screen and (max-width : 460px) {
@@ -883,7 +889,6 @@
 					right: 20px;
 					display: block;
 					top: 20px;
-					height: 30px;
 					line-height: 30px;
 					text-align: center;
 					font-size: bkscale(@font-swatch5-font-size, 0.8);
@@ -898,10 +903,8 @@
 				.basket-summary-quantitybtn {
 					background-color: transparent;
 					margin: 0;
-					position: absolute;
+					position: relative;
 					width: 150px;
-					right: 20px;
-					top: 50px;
 					height: 40px;
 					@media @bp-checkout-compact {
 						position: relative;
@@ -920,8 +923,6 @@
 						border: none;
 						cursor: pointer;
 						padding: 0;
-						color: @color-swatch1;
-						background-color: @color-swatch3;
 						position: absolute;
 						top: 0;
 						width: 40px;
@@ -934,9 +935,6 @@
 							line-height: 30px;
 						}
 
-						&:hover {
-							background-color: darken(@color-swatch2, 10%);
-						}
 
 						&.js-remove {
 							border-radius: 50px 0 0 50px;
