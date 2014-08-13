@@ -410,11 +410,19 @@
 			color: @color-swatch1;
 			min-width: 30px;
 			border-radius: 60px;
-			top: 0;
-			left: 10px;
+			top: 50%;
+			left: 50%;
 			width: 60px;
+			margin: -30px 0 0 -30px;
+
+			&:not(.pause){
+				opacity: 0.3;
+				background-color: #000;
+				&:hover {
+					opacity: 1;
+				}
+			}
 			@media @bp-slideshow-frameless {
-				top: 10px;
 				background-color: @color-swatch1;
 				color: @color-swatch3;
 			}
