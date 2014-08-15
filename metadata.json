@@ -1,7 +1,6 @@
 {
 	"name":"Spiritus",
-	"thumbnail":"screenshot.png",
-	"screenshot":"screenshot.png",
+	"thumbnail":"spiritus.png",
 	"templateType":"standard",
 	"pageTypes": ["home"], 
 	"tags": {
