@@ -276,11 +276,12 @@
 	background-image: image('/images/feature.png');
 	background-color: @color-swatch2;
 
-
+	// when inside the Column Widget
 	.responsivecolumns & {
 		background-image: none;
 		background-color: fade(@color-swatch2, 20%);
 		padding: 0;
+		border-radius: 16px;
 		&:before {
 			display: none;
 		}
