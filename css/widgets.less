@@ -276,6 +276,16 @@
 	background-image: image('/images/feature.png');
 	background-color: @color-swatch2;
 
+
+	.responsivecolumns & {
+		background-image: none;
+		background-color: fade(, 10%);
+		padding: 0;
+		&:before {
+			display: none;
+		}
+	}
+
 	@media @bp-slideshow-frameless {
 		padding: 0 !important;
 		background-image: none;
