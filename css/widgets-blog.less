@@ -113,7 +113,6 @@
 				margin-bottom: 20px;
 			}
 
-
 			.blog-post-feature-image-wrap {
 				padding-bottom: 30%;
 				background-size: cover;
@@ -169,9 +168,7 @@
 					border-color: fade(@color-swatch1, 50%) @color-swatch1;
 				}
 
-				.blog-post-item.has-image &:after {
-					display: none;
-				}
+				
 
 				a {
 					color: @color-swatch1;
@@ -206,6 +203,10 @@
 
 		}
 	}
+}
+
+.blog-post-item.has-image .blog-post-title:after {
+	display: none;
 }
 
 
