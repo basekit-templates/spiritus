@@ -258,15 +258,7 @@ body {
 	position: relative;
 	background-color: @color-swatch2;
 	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		left: 0; right: 0; top: 0; bottom: 0;
 		
-		background-image: image('/images/feature.png');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
 	}
 
 	.feature-bgimg, .feature-bgimg .content {
@@ -385,6 +377,8 @@ body {
 	    -webkit-align-items: center;
 	    -ms-flex-align: center;
 	    align-items: center;
+
+	    color: fade(@color-swatch4, 70%);
 
 	    @media @tablet {
 	    	display: block;
