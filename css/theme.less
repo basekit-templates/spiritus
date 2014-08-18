@@ -257,9 +257,6 @@ body {
 .home-feature .widget.feature {
 	position: relative;
 	background-color: @color-swatch2;
-	&:after {
-		
-	}
 
 	.feature-bgimg, .feature-bgimg .content {
 		@media @tablet {
@@ -294,6 +291,15 @@ body {
 				font-size: bkscale(@font-swatch9-font-size, 0.5);
 				line-height: bkscale(@font-swatch9-line-height, 0.5);
 				margin-bottom: 1em;
+			}
+		}
+		h2, h3 {
+			& span {
+				display: inline-block;
+				background-color: fade(@color-swatch2, 20%);
+				padding: 0.15em 15px;
+				position: relative;
+				left: -15px;
 			}
 		}
 	}
