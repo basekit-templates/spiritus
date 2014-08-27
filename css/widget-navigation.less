@@ -22,7 +22,6 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 	// Shift content to the left when nav is open
 	&.navOpen {
 		@media @tablet {
-			background-color: mix(@color-swatch2, @color-swatch1, 6%);
 			left: -@tabletNavWidth;
 		}
 		@media @mobile {
@@ -31,8 +30,31 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 		.header {
 			box-shadow: -20px 0px 30px 0px rgba(0, 0, 0, 0.2);
 		}
+
 	}
 }
+
+
+.nav-dummy {
+		position: absolute;
+		background-color: mix(@color-swatch2, #fff, 6%);
+		top: 0;
+		bottom: 0;
+		width: 400px;
+
+		@media @tablet {
+			right: -@tabletNavWidth;
+			width: @tabletNavWidth;
+		}
+		@media @mobile {
+			right: -@mobileNavWidth;
+			width: @mobileNavWidth;
+		}
+
+		@media @desktop {
+			display: none;
+		}
+	}
 
 
 // Nav
@@ -49,6 +71,7 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 		@media @tablet {
 			// BS reset
 			padding-top: 0;
+			display: block;
 		}
 	}
 
@@ -240,51 +263,56 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
     }
 
    	// Trigger Icon: Cross
-    ul[style*="display: block"] + a.pull, ul.open + a.pull {
-    	 @media @tablet {
-    	 	// Cross lines
-    	 	&:after, &:before {
-    	 		  box-shadow: none;
-    	 		  margin: -3px 0 0 -10px;
-    	 	}
-    	 	// Cross Line 1
-    	 	&:after {
-	            -webkit-transform: rotate(45deg);
-				-moz-transform: rotate(45deg);
-				-o-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				transform: rotate(45deg);
-    	 	}
-    	 	// Cross Line 2
-    	 	&:before {
-    	 		display: block;
-	            -webkit-transform: rotate(-45deg);
-				-moz-transform: rotate(-45deg);
-				-o-transform: rotate(-45deg);
-				-ms-transform: rotate(-45deg);
-				transform: rotate(-45deg);
-    	 	}
+    a.pull {
+    	.navOpen & {
+    		@media @tablet {
+	    	 	// Cross lines
+	    	 	&:after, &:before {
+	    	 		  box-shadow: none;
+	    	 		  margin: -3px 0 0 -10px;
+	    	 	}
+	    	 	// Cross Line 1
+	    	 	&:after {
+		            -webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+	    	 	}
+	    	 	// Cross Line 2
+	    	 	&:before {
+	    	 		display: block;
+		            -webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(-45deg);
+					-o-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+	    	 	}
+	    	}
     	}
     }
 
 
 	// ---- Pull Menu Open
-	ul.open, ul[style*="block"] {
+	.extendednavigation > ul {
 		@media @tablet {
 			display: block;
 			position: absolute;
 			background-color: mix(@color-swatch2, #fff, 6%);
 			right: (-@tabletNavWidth + 10);
 			width: (@tabletNavWidth - 20);
-			li {
-				margin: 0;
-				padding: 0;
-				display: block;
-			}
+			
 		}
 		@media @mobile {
 			right: (-@mobileNavWidth + 10);
 			width: (@mobileNavWidth - 20);
 		}	
+		li {
+			@media @tablet {
+				margin: 0;
+				padding: 0;
+				display: block;
+			}
+		}
 	}	
 }
