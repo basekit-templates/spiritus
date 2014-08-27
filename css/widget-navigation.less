@@ -35,26 +35,24 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 }
 
 
-.nav-dummy {
-		position: absolute;
-		background-color: mix(@color-swatch2, #fff, 6%);
-		top: 0;
-		bottom: 0;
-		width: 400px;
+.navOpen .nav-dummy {
+	position: absolute;
+	background-color: mix(@color-swatch2, #fff, 6%);
+	top: 0;
+	bottom: 0;
+	width: 400px;
 
-		@media @tablet {
-			right: -@tabletNavWidth;
-			width: @tabletNavWidth;
-		}
-		@media @mobile {
-			right: -@mobileNavWidth;
-			width: @mobileNavWidth;
-		}
-
-		@media @desktop {
-			display: none;
-		}
+	@media @tablet {
+		right: -@tabletNavWidth;
+		width: @tabletNavWidth;
 	}
+	@media @mobile {
+		right: -@mobileNavWidth;
+		width: @mobileNavWidth;
+	}
+
+	
+}
 
 
 // Nav
@@ -71,7 +69,6 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 		@media @tablet {
 			// BS reset
 			padding-top: 0;
-			display: block;
 		}
 	}
 
@@ -294,7 +291,7 @@ div.widget .extendednavigation ul.align-right, div.widget.extendednavigation ul.
 
 
 	// ---- Pull Menu Open
-	.extendednavigation > ul {
+	ul.open {
 		@media @tablet {
 			display: block;
 			position: absolute;
