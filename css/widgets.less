@@ -612,6 +612,12 @@
 		background-image: none;
 		padding: 0 !important;
 		background-color: transparent;
+
+		span.title,
+		span.description {
+				font-size: bkscale(@font-swatch5-font-size, 0.6);
+				line-height: bkscale(@font-swatch5-line-height, 0.6);
+			}
 	}
 
 	@media only screen and (max-width : 650px) {
@@ -683,16 +689,6 @@
 		-o-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 
-	}
-
-	.responsivecolumns .column {
-		.widget.gallery {
-			.title,
-			.description {
-				font-size: bkscale(@font-swatch5-font-size, 0.6);
-				line-height: bkscale(@font-swatch5-line-height, 0.6);
-			}
-		}
 	}
 }
 
