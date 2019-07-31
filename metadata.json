@@ -3,6 +3,7 @@
 	"thumbnail":"spiritus.png",
 	"screenshot":"spiritus-screenshot.jpg",
 	"templateType":"standard",
+  "versionTenCompatible": 1,
 	"pageTypes": ["home"], 
 	"tags": {
 		"en": ["clean","fancy","bold","positive","spirit","fit","healthy","flat"]
