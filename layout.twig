@@ -15,7 +15,7 @@
 	{% include "includes/head.twig" %}
 	{% include basekit.headScript %}
 </head>
-<body id="templateBody" class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+<body id="templateBody" class="{{ page.backgroundClass }} {{ site.colorSwatch }}" {{ isV10sSite ? 'id="migrated-site"' : '' }}>
 	<div class="nav-dummy">
 		
 	</div>
